@@ -9,9 +9,9 @@ public class Main
     public static void main(String[] args) 
     {
         MainInstaller.InstallBindings();
-        
+
         IDataBaseAccess dataBaseAccess = Container.Resolve(IDataBaseAccess.class);
-        
+
         dataBaseAccess.AddPublisher("Umar");
         dataBaseAccess.GetAllTitles();
         dataBaseAccess.GetAuthors(true);

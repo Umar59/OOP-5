@@ -7,37 +7,44 @@ import java.sql.*;
 
 public class Access implements IDataBaseAccess
 {
-    public void AddPublisher(String publisherName)
-    {
-        String updatePublishersTableCommand = "INSERT INTO Publishers (publisherName)" + "VALUES ('" + publisherName + "')";
-        Execute(updatePublishersTableCommand);
-    }
-    public void RenamePublisher(String currentName, String newName)
-    {
-        String updatePublishersTableCommand = "UPDATE books.publishers" + " set publisherName = '" + newName + "'" + " where publisherName = '" + currentName + "'";
-        Execute(updatePublishersTableCommand);
-    }
-    
     public void AddAuthor(String firstName, String lastName)
     {
+        //language=MySQL
         var addAuthorsTableCommand = "INSERT INTO authors (firstName, lastName)" + "VALUES ('" + firstName + "', '" + lastName + "')";
         Execute(addAuthorsTableCommand);
     }
-    public void RenameAuthor(int id, String firstName, String lastName)
+
+    public void AddPublisher(String publisherName)
     {
-        String updateAuthorsTableCommand = "UPDATE authors" + " set firstName = '" + firstName + "', lastName = '" + lastName + "'" + " where authorID = '" + id + "'";
-        Execute(updateAuthorsTableCommand);
+        //language=MySQL
+        String updatePublishersTableCommand = "INSERT INTO Publishers (publisherName)" + "VALUES ('" + publisherName + "')";
+        Execute(updatePublishersTableCommand);
     }
     
     public void AddTitle(String firstName, String lastName, String publisher, String titleName, int year, int editionNumber, int price)
     {
+        //language=MySQL
         String insertIntoTitlesQuery = "INSERT INTO titles(isbn, title, editionNumber, year, publisherID, price)"
                 + " VALUES ((SELECT authorID FROM authors WHERE firstName = '" + firstName + "' LIMIT 1), '" + titleName + "', '" + editionNumber + "', '" + year + "'," +
                 " (SELECT publisherID FROM publishers WHERE publisherName = '" + publisher + "' LIMIT 1), '" + price + "' )";
-        
+
         Execute(insertIntoTitlesQuery);
     }
-    
+
+    public void RenamePublisher(String currentName, String newName)
+    {
+        //language=MySQL
+        String updatePublishersTableCommand = "UPDATE books.publishers" + " set publisherName = '" + newName + "'" + " where publisherName = '" + currentName + "'";
+        Execute(updatePublishersTableCommand);
+    }
+
+    public void RenameAuthor(int id, String firstName, String lastName)
+    {
+        //language=MySQL
+        String updateAuthorsTableCommand = "UPDATE authors" + " set firstName = '" + firstName + "', lastName = '" + lastName + "'" + " where authorID = '" + id + "'";
+        Execute(updateAuthorsTableCommand);
+    }
+
     public void GetBooksOfPublisher(String name, boolean IsSorted)
     {
         Statement statement;
@@ -49,10 +56,12 @@ public class Access implements IDataBaseAccess
             statement = JDBC.connection.createStatement();
 
             String query;
-
+            
             if (IsSorted)
+                //language=MySQL
                 query = "SELECT * FROM titles where publisherID = (select publisherID from publishers where publisherName = '" + name + "' limit 1) order by title";
             else
+                //language=MySQL
                 query = "SELECT * FROM titles where publisherID = (select publisherID from publishers where publisherName = '" + name + "')";
 
             System.out.println("Titles:");
@@ -79,7 +88,7 @@ public class Access implements IDataBaseAccess
             JDBC.setConnection();
 
             statement = JDBC.connection.createStatement();
-
+            //language=MySQL
             String exampleQuery1 = "SELECT * FROM titles";
 
             System.out.println("Titles:");
@@ -120,8 +129,10 @@ public class Access implements IDataBaseAccess
             String query;
 
             if (IsSorted)
+                //language=MySQL
                 query = "SELECT * FROM authors ORDER BY firstName, lastName";
             else
+                //language=MySQL
                 query = "SELECT * FROM authors";
 
             System.out.println("Authors:");
@@ -155,8 +166,10 @@ public class Access implements IDataBaseAccess
             String query;
 
             if (IsSorted)
+                //language=MySQL
                 query = "SELECT * FROM publishers ORDER BY publisherName";
             else
+                //language=MySQL
                 query = "SELECT * FROM authors";
 
             System.out.println("Publishers:");
