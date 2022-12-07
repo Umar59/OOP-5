@@ -11,6 +11,11 @@ public class StringExtensions
         System.out.println(string);
     }
     
+    public static void ClearConsole()
+    {
+        System.out.flush();
+    }
+    
     public static void CreateMenuString(String string)
     {
         print("\n" + string + "\n");

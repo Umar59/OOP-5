@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/src/main/java/TestOfTables/Access.java" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/TestOfTables/CreateTables.java" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/TestOfTables/InsertTestData.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/DBTutorial/TestOfTables/Access.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/DBTutorial/TestOfTables/CreateTables.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/DBTutorial/TestOfTables/InsertTestData.java" dialect="MySQL" />
   </component>
   <component name="SqlResolveMappings">
-    <file url="file://$PROJECT_DIR$/src/main/java/TestOfTables/CreateTables.java" scope="{&quot;node&quot;:{  &quot;@negative&quot;:&quot;1&quot;,  &quot;group&quot;:{   &quot;@kind&quot;:&quot;root&quot;,   &quot;node&quot;:{    &quot;name&quot;:{     &quot;@qname&quot;:&quot;92c4b632-5608-48f7-ac59-6cd4d62b03b6&quot;    },    &quot;group&quot;:{     &quot;@kind&quot;:&quot;schema&quot;,     &quot;node&quot;:{      &quot;name&quot;:{       &quot;@qname&quot;:&quot;books&quot;      }     }    }   }  } }}" />
+    <file url="file://$PROJECT_DIR$/src/main/java/DBTutorial/TestOfTables/CreateTables.java" scope="{&quot;node&quot;:{  &quot;@negative&quot;:&quot;1&quot;,  &quot;group&quot;:{   &quot;@kind&quot;:&quot;root&quot;,   &quot;node&quot;:{    &quot;name&quot;:{     &quot;@qname&quot;:&quot;92c4b632-5608-48f7-ac59-6cd4d62b03b6&quot;    },    &quot;group&quot;:{     &quot;@kind&quot;:&quot;schema&quot;,     &quot;node&quot;:{      &quot;name&quot;:{       &quot;@qname&quot;:&quot;books&quot;      }     }    }   }  } }}" />
     <file url="PROJECT" scope="{&quot;node&quot;:{  &quot;@negative&quot;:&quot;1&quot;,  &quot;group&quot;:{   &quot;@kind&quot;:&quot;root&quot;,   &quot;node&quot;:{    &quot;name&quot;:{     &quot;@qname&quot;:&quot;92c4b632-5608-48f7-ac59-6cd4d62b03b6&quot;    },    &quot;group&quot;:{     &quot;@kind&quot;:&quot;schema&quot;,     &quot;node&quot;:{      &quot;name&quot;:{       &quot;@qname&quot;:&quot;books&quot;      }     }    }   }  } }}" />
   </component>
 </project>

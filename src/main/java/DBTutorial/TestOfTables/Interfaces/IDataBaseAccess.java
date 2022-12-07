@@ -1,4 +1,4 @@
-package TestOfTables.Interfaces;
+package DBTutorial.TestOfTables.Interfaces;
 
 public interface IDataBaseAccess 
 {

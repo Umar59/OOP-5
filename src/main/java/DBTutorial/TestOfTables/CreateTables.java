@@ -1,4 +1,4 @@
-package TestOfTables;
+package DBTutorial.TestOfTables;
 
 import Connection.JDBC;
 

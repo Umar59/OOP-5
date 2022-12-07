@@ -1,7 +1,7 @@
-package TestOfTables;
+package DBTutorial.TestOfTables;
 
 import Connection.JDBC;
-import TestOfTables.Interfaces.IDataBaseAccess;
+import DBTutorial.TestOfTables.Interfaces.IDataBaseAccess;
 
 import java.sql.*;
 

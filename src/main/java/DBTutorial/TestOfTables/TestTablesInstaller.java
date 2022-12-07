@@ -1,8 +1,8 @@
-package TestOfTables;
+package DBTutorial.TestOfTables;
 
+import DBTutorial.TestOfTables.Interfaces.IDataBaseAccess;
 import DiContainer.Bootstrap.Container;
 import DiContainer.Interfaces.IInstaller;
-import TestOfTables.Interfaces.IDataBaseAccess;
 
 public class TestTablesInstaller implements IInstaller
 {
